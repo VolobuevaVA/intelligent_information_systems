@@ -3,7 +3,7 @@
 *.venv
 __pycache__/
 *.pyc
-README.md
-requirements.txt
 .vscode
 .venv_my_proj
+*.png
+*.html
