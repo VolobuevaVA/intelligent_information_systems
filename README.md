@@ -67,5 +67,5 @@ sh start_mlflow.sh
 Лучшей показала себя Baseline модель (RandomForest) с метрикой MAE = 0.701<br>
 - Модель: RandomForestRegressor<br>
 - Версия: 9 (car_price_model)<br>
-- Run ID: a62f28ce8151419c91546e5ab24f8ec6<br>
+- Run ID: 4a08cd3868eb463baaee2dcbf614a72c<br>
 - Признаки: Present_Price, Driven_kms, Fuel_Type, Selling_type, Transmission, Year_Category, Car_Frequency_Category
