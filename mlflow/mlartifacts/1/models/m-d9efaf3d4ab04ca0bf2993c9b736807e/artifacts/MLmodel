@@ -1,0 +1,38 @@
+artifact_path: /home/mainuser/intelligent_information_systems/mlflow/mlartifacts/1/models/m-d9efaf3d4ab04ca0bf2993c9b736807e/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.5.1
+model_id: m-d9efaf3d4ab04ca0bf2993c9b736807e
+model_size_bytes: 3845254
+model_uuid: m-d9efaf3d4ab04ca0bf2993c9b736807e
+prompts: null
+run_id: a62f28ce8151419c91546e5ab24f8ec6
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "float", "name": "Present_Price", "required": true}, {"type":
+    "integer", "name": "Driven_kms", "required": true}, {"type": "string", "name":
+    "Fuel_Type", "required": true}, {"type": "string", "name": "Selling_type", "required":
+    true}, {"type": "string", "name": "Transmission", "required": true}, {"type":
+    "string", "name": "Year_Category", "required": true}, {"type": "string", "name":
+    "Car_Frequency_Category", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-11-05 20:39:53.164744'

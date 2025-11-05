@@ -1,0 +1,6 @@
+num__Present_Price
+num__Driven_kms
+cat__Year_Category
+poly__Present_Price
+poly__Present_Price^2
+poly__Driven_kms^2

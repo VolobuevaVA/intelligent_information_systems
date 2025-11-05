@@ -7,16 +7,25 @@
 https://www.kaggle.com/datasets/vijayaadithyanvg/car-price-predictionused-cars
 
 ## Запуск проекта
-Для запуска проекта необходимо выполнить команды:<br>
-git clone https://github.com/VolobuevaVA/intelligent_information_systems.git<br>
+Для запуска проекта необходимо выполнить команды:
+'''
+git clone https://github.com/VolobuevaVA/intelligent_information_systems.git
+'''
+'''
 cd intelligent_information_sistems
-
+'''
 ##  Создание виртуального окружения
-python -m venv .venv_my_proj<br>
-source .venv_my_proj/bin/activate<br>
+'''
+python -m venv .venv_my_proj
+'''
+'''
+source .venv_my_proj/bin/activate
+'''
 
 ##  Установка зависимостей
+'''
 pip install -r requirements.txt
+'''
 
 ##  Исследование данных
 Находится в ./eda/eda.ipynb
@@ -40,3 +49,23 @@ pip install -r requirements.txt
 Выявлены ценовые сегменты по типам автомобилей<br>
 ## Примечание:
 Обработанная выборка сохранена в файл ./data/car_clean_data.pkl
+
+## Запуск MLFlow
+MLFlow запускается из директории mlflow/
+'''
+cd mlflow
+'''
+'''
+sh start_mlflow.sh
+'''
+Фреймворк будет доступен по адресу: http://localhost:5000
+
+## Настройка моделей
+Находится в ./research/research.ipynb
+
+## Результаты исследования моделей
+Лучшей показала себя Baseline модель (RandomForest) с метрикой MAE = 0.701<br>
+- Модель: RandomForestRegressor<br>
+- Версия: 9 (car_price_model)<br>
+- Run ID: a62f28ce8151419c91546e5ab24f8ec6<br>
+- Признаки: Present_Price, Driven_kms, Fuel_Type, Selling_type, Transmission, Year_Category, Car_Frequency_Category

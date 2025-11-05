@@ -1,0 +1,60 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "Present_Price",
+      "Driven_kms",
+      "Fuel_Type",
+      "Selling_type",
+      "Transmission",
+      "Year_Category",
+      "Car_Frequency_Category"
+    ],
+    "data": [
+      [
+        5.590000152587891,
+        27000,
+        "Petrol",
+        "Dealer",
+        "Manual",
+        "2011-2015",
+        "Medium_Frequency_Brands"
+      ],
+      [
+        9.539999961853027,
+        43000,
+        "Diesel",
+        "Dealer",
+        "Manual",
+        "2011-2015",
+        "Medium_Frequency_Brands"
+      ],
+      [
+        9.850000381469727,
+        6900,
+        "Petrol",
+        "Dealer",
+        "Manual",
+        "2016-2018",
+        "High_Frequency_Brands"
+      ],
+      [
+        4.150000095367432,
+        5200,
+        "Petrol",
+        "Dealer",
+        "Manual",
+        "2011-2015",
+        "Medium_Frequency_Brands"
+      ],
+      [
+        6.869999885559082,
+        42450,
+        "Diesel",
+        "Dealer",
+        "Manual",
+        "2011-2015",
+        "Medium_Frequency_Brands"
+      ]
+    ]
+  }
+}

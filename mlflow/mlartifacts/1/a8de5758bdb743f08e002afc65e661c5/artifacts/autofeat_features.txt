@@ -1,0 +1,11 @@
+Present_Price
+Driven_kms
+Present_Price**3
+log(Present_Price)
+Driven_kms**2
+1/Driven_kms
+Fuel_Type
+Selling_type
+Transmission
+Year_Category
+Car_Frequency_Category

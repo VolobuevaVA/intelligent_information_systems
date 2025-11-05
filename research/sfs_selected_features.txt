@@ -1,0 +1,5 @@
+num__Present_Price
+cat__Fuel_Type
+cat__Year_Category
+poly__Present_Price Driven_kms
+poly__Driven_kms^2
