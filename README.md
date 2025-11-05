@@ -8,24 +8,24 @@ https://www.kaggle.com/datasets/vijayaadithyanvg/car-price-predictionused-cars
 
 ## Запуск проекта
 Для запуска проекта необходимо выполнить команды:
-'''
+```
 git clone https://github.com/VolobuevaVA/intelligent_information_systems.git
-'''
-'''
+```
+```
 cd intelligent_information_sistems
-'''
+```
 ##  Создание виртуального окружения
-'''
+```
 python -m venv .venv_my_proj
-'''
-'''
+```
+```
 source .venv_my_proj/bin/activate
-'''
+```
 
 ##  Установка зависимостей
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 ##  Исследование данных
 Находится в ./eda/eda.ipynb
@@ -52,12 +52,12 @@ pip install -r requirements.txt
 
 ## Запуск MLFlow
 MLFlow запускается из директории mlflow/
-'''
+```
 cd mlflow
-'''
-'''
+```
+```
 sh start_mlflow.sh
-'''
+```
 Фреймворк будет доступен по адресу: http://localhost:5000
 
 ## Настройка моделей
