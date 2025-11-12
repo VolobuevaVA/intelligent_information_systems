@@ -6,6 +6,8 @@ __pycache__/
 .vscode
 .venv_my_proj
 *.png
+!research/*.png
 *.html
 mlflow/mlartifacts/
 mlflow/mlruns.db
+catboost_info/
