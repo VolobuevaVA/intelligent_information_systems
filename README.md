@@ -69,3 +69,48 @@ sh start_mlflow.sh
 - Версия: 9 (car_price_model)<br>
 - Run ID: 4a08cd3868eb463baaee2dcbf614a72c<br>
 - Признаки: Present_Price, Driven_kms, Fuel_Type, Selling_type, Transmission, Year_Category, Car_Frequency_Category
+
+## ML Service
+Микросервис для предсказания цен на автомобили с использованием ML модели.<br>
+Сервис предоставляет REST API на основе FastAPI и запускается в Docker контейнере.
+
+## Папка 'services/ml_service/':
+- 'main.py' - основной файл FastAPI приложения, содержит endpoints:<br>
+- 'GET /' - тестовый endpoint, возвращает '{"Hello": "World"}'<br>
+- 'POST /api/prediction' - endpoint для предсказания цены автомобиля<br>
+- 'api_handler.py' - класс-обработчик для загрузки ML модели и выполнения предсказаний<br>
+- 'Dockerfile' - конфигурация для сборки Docker образа<br>
+- 'requirements.txt' - зависимости сервиса (fastapi, uvicorn, pandas, scikit-learn, mlflow)<br>
+- 'model_fixed.pkl' - сохраненная ML модель
+
+## Папка 'services/models/':
+- 'get_model.py' - скрипт для загрузки модели из MLflow по run_id<br>
+- 'model.pkl' - исходная ML модель<br>
+- 'model_fixed.pkl' - исправленная версия модели для работы в контейнере
+
+## Сборка Docker образа:
+```
+cd services/ml_service
+docker build -t car_price_service:1 .
+```
+
+## Запуск контейнера:
+```
+docker run -d -p 8000:8000 car_price_service:1
+```
+
+## Проверка работоспособности:
+Открыть в браузере: http://localhost:8000/docs <br>
+
+Протестируйте endpoint POST /api/prediction:<br>
+
+## Параметры запроса:
+```
+item_id : 123
+```
+## Тело запроса (json):
+```
+{
+  "features": [5.5, 50000, 1, 0, 1, 3, 2]
+}
+```
