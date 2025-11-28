@@ -86,7 +86,7 @@ sh start_mlflow.sh
 ## Папка 'services/models/':
 - 'get_model.py' - скрипт для загрузки модели из MLflow по run_id<br>
 - 'model.pkl' - исходная ML модель<br>
-- 'model_fixed.pkl' - исправленная версия модели для работы в контейнере
+- 'model_fixed.pkl' - модель для работы в контейнере
 
 ## Сборка Docker образа:
 ```
