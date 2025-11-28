@@ -11,3 +11,4 @@ __pycache__/
 mlflow/mlartifacts/
 mlflow/mlruns.db
 catboost_info/
+mlruns/
