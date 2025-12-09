@@ -12,3 +12,4 @@ mlflow/mlartifacts/
 mlflow/mlruns.db
 catboost_info/
 mlruns/
+mlruns.db
