@@ -18,3 +18,4 @@ services/grafana/pdf/
 services/grafana/csv/
 services/grafana/grafana.db
 services/grafana/plugins/
+!services/scrin/*.png
