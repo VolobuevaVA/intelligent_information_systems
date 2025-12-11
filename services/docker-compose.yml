@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  price-predict:
+    image: car_price_service:2
+    build: ./ml_service
+    ports:
+      - "8000:8000"  
+    volumes:
+      - ./ml_service:/app
+    environment:
+      - MODEL_PATH=/app/model_fixed.pkl
+
+  requests:
+    image: request_service:1
+    build: ./requests
+    depends_on:
+      - price-predict
+    environment:
+      - PREDICTION_SERVICE_URL=http://price-predict:8000
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    volumes:
+      - "./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
+    depends_on:
+      - price-predict
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    user: "root"  
+    volumes:
+      - "./grafana:/var/lib/grafana"
+    depends_on:
+      - prometheus
+    restart: unless-stopped

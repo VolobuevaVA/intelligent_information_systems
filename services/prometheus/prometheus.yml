@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+  scrape_timeout: 10s
+
+scrape_configs:
+  - job_name: 'prediction-service'
+    metrics_path: /metrics
+    scheme: http
+    static_configs:
+      - targets: ['price-predict:8000']
+        labels:
+          service: 'car-price-prediction'

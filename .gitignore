@@ -13,3 +13,7 @@ mlflow/mlruns.db
 catboost_info/
 mlruns/
 mlruns.db
+services/grafana/png/
+services/grafana/pdf/
+services/grafana/csv/
+services/grafana/grafana.db
